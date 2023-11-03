@@ -1,4 +1,5 @@
 import React from "react";
+import CostumeTimeline from "../CostumeTimeline";
 import './index.css'
 
 function Profile() {
@@ -14,7 +15,7 @@ function Profile() {
             </div>
 
             <div className="p-5">
-                timeline
+                <CostumeTimeline />
                 <br />
                 <button>my button</button>
             </div>
