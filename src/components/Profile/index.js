@@ -1,5 +1,6 @@
 import React from "react";
 import CostumeTimeline from "../CostumeTimeline";
+import ContactEmergencyIcon from '@mui/icons-material/ContactEmergency';
 import './index.css'
 
 function Profile() {
@@ -15,7 +16,7 @@ function Profile() {
             </div>
 
             <div className="p-5">
-                <CostumeTimeline />
+                <CostumeTimeline icon={<ContactEmergencyIcon />} />
                 <br />
                 <button>my button</button>
             </div>

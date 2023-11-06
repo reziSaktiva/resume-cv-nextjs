@@ -6,30 +6,38 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
-export default function CostumeTimeline() {
+import { Typography } from '@mui/material'
+import './index.css'
+
+export default function CostumeTimeline({ title, children, icon }) {
     return (
-        <Timeline>
+        <Timeline className="timeline p-[0 !importent]">
+            {/* item header */}
             <TimelineItem>
                 <TimelineSeparator>
-                    <TimelineDot />
+                    <TimelineDot className="text-black">{icon}</TimelineDot>
                     <TimelineConnector />
                 </TimelineSeparator>
-                <TimelineContent>Eat</TimelineContent>
+                <TimelineContent>
+                    <Typography variant="h6">{title}</Typography>
+                </TimelineContent>
             </TimelineItem>
+            {children}
+            {/* remainings item */}
             <TimelineItem>
-                <TimelineSeparator>
-                    <TimelineDot />
-                    <TimelineConnector />
-                </TimelineSeparator>
+                <CostumeTimelineSeparator />
                 <TimelineContent>Code</TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-                <TimelineSeparator>
-                    <TimelineDot />
-                </TimelineSeparator>
-                <TimelineContent>Sleep</TimelineContent>
             </TimelineItem>
         </Timeline>
     );
+}
+
+export const CostumeTimelineSeparator = () => {
+    return (
+        <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+        </TimelineSeparator>
+    )
 }
 
