@@ -11,11 +11,11 @@ import './index.css'
 
 export default function CostumeTimeline({ title, children, icon }) {
     return (
-        <Timeline className="timeline p-[0 !importent]">
+        <Timeline className="timeline p-0">
             {/* item header */}
             <TimelineItem>
                 <TimelineSeparator>
-                    <TimelineDot className="text-black">{icon}</TimelineDot>
+                    <TimelineDot className="bg-purple">{icon}</TimelineDot>
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
@@ -34,8 +34,8 @@ export default function CostumeTimeline({ title, children, icon }) {
 
 export const CostumeTimelineSeparator = () => {
     return (
-        <TimelineSeparator>
-            <TimelineDot />
+        <TimelineSeparator className="pl-3">
+            <TimelineDot className="bg-purple" />
             <TimelineConnector />
         </TimelineSeparator>
     )
